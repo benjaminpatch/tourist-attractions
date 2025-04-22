@@ -2,13 +2,12 @@
 
 <!-- begin block content here -->
 
-<h1>{{ categories[category] }}</h1> <!-- insert category here -->
+<h1>{{ categories[category] }}</h1>
 
 <div class="navbar">
-  <!-- begin for loop here -->
-
-    <a href=""></a> <!-- set attribute and text here -->
-  <!-- end for loop here -->
+  {% for category, label in categories.items() %}
+    <a href="{{ category }}">{{ label }}</a>
+  {% endfor %}
 
 </div>
 
