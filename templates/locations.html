@@ -5,10 +5,9 @@
 <h1>{{ categories[category] }}</h1>
 
 <div class="navbar">
-  {% for category, label in categories.items() %}
-    <a href="{{ category }}">{{ label }}</a>
-  {% endfor %}
-
+{% for category, label in categories.items() %}
+  <a href="{{ category }}">{{ label }}</a>
+{% endfor %}
 </div>
 
 <table>
