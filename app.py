@@ -22,7 +22,10 @@ def locations(category):
     elif action == DEL_ACTION:
       visit.delete(name)
   ## Return the main template with variables
-  return render_template("locations.html")
+  return render_template("locations.html",
+                         category=category,
+                         categories=categories,
+                         locations=locations)
 
 @app.route("/add_location", methods=["POST"])
 def add_location():
