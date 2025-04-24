@@ -1,7 +1,6 @@
-<!-- extend from "base.html" here -->
+{% extends "base.html" %}
 
-<!-- begin block content here -->
-
+{% block content %}
 <h1>{{ categories[category] }}</h1>
 
 <div class="navbar">
@@ -67,4 +66,4 @@
     </tbody>
   </table>
 </form>
-<!-- end block content here -->
+{% endblock %}
