@@ -22,14 +22,12 @@
       <td class="loc">{{ location.name }}</td>
       <td class="desc">{{ location.description }}</td>
       <td class="btns">
-        <!-- start if statement here -->
-
+      {% if location.category in ["recommended", "tovisit"] %}
         <form method="POST">
           <input type="submit" class="up" name="{{ location.name }}" value=&#8599;>
           <input type="submit" class="del" name="{{ location.name }}" value="X">
         </form>
-        <!-- end if statement here -->
-
+      {% endif %}
       </td>
     </tr>
   {% endfor %}
